@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "sQysDFGNzYlbczIgJM1Of5KaRYWN2AEq+vk8jB5gMlg=",
+  "Hash": "O0Fn8j01UIeCES1NjFqX15lXV9RqSAKmBPbGxYDC1Hk=",
   "Source": "TamagotchiApp",
   "BasePath": "_content/TamagotchiApp",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "TamagotchiApp\\wwwroot",
+      "Source": "TamagotchiApp",
+      "ContentRoot": "D:\\Programming\\projects\\Tamagotchi\\TamagotchiApp\\wwwroot\\",
+      "BasePath": "_content/TamagotchiApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Programming\\projects\\Tamagotchi\\TamagotchiApp\\wwwroot\\index.html",
+      "SourceId": "TamagotchiApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programming\\projects\\Tamagotchi\\TamagotchiApp\\wwwroot\\",
+      "BasePath": "_content/TamagotchiApp",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\Programming\\projects\\Tamagotchi\\TamagotchiApp\\wwwroot\\test.html",
+      "SourceId": "TamagotchiApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Programming\\projects\\Tamagotchi\\TamagotchiApp\\wwwroot\\",
+      "BasePath": "_content/TamagotchiApp",
+      "RelativePath": "test.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\test.html"
+    }
+  ]
 }

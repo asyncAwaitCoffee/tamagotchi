@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form action="/tama-new" method="POST">
+        <input type="text" name="name">
+        <input type="submit" value="Ok">
+    </form>
+    <form id="form-feed" action="/feed" method="POST">
+        <select id="tama-list" name="name"></select>
+        <select id="food-list" name="foodId"></select>
+        <input type="submit" value="Ok">
+    </form>
+    <table id="tama-stats"></table>
+    <script>
+        const tamaList = document.getElementById("tama-list");
+        const formFeed = document.getElementById("form-feed");
+        const foodList = document.getElementById("food-list");
+        const tamaStats = document.getElementById("tama-stats");
+
+        fetch("/api/tama-all")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                for (const tama of data) {
+                    const opt = document.createElement("option");
+                    opt.value = tama.name;
+                    opt.text = tama.name;
+                    tamaList.appendChild(opt);
+
+                    const tr = document.createElement("tr");
+                    const tdName = document.createElement("td");
+                    tdName.textContent = tama.name;
+                    const tdHealth = document.createElement("td");
+                    tdHealth.textContent = tama.health;
+                    const tdAge = document.createElement("td");
+                    tdAge.textContent = tama.age;
+                    const tdFullness = document.createElement("td");
+                    tdFullness.textContent = tama.fullness;
+                    tr.append(tdName, tdHealth, tdAge, tdFullness);
+                    tamaStats.appendChild(tr);
+                    
+                }
+            });
+
+        fetch("api/food-list")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                for (const id in data) {
+                    const opt = document.createElement("option");
+                    opt.value = id;
+                    opt.text = `${data[id].name} (${data[id].value} ccal) - ${data[id].price}g`;
+                    foodList.appendChild(opt);
+                }
+            })
+
+        formFeed.addEventListener("submit", ev => {
+            ev.preventDefault();
+            const formData = new FormData(formFeed);
+            fetch(`api/feed`, {
+                method: "PUT",
+                body: formData
+            })
+        })
+    </script>
+</body>
+</html>

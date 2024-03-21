@@ -24,3 +24,6 @@ D:\Programming\projects\Tamagotchi\TamagotchiApp\obj\Debug\net8.0\refint\Tamagot
 D:\Programming\projects\Tamagotchi\TamagotchiApp\obj\Debug\net8.0\TamagotchiApp.pdb
 D:\Programming\projects\Tamagotchi\TamagotchiApp\obj\Debug\net8.0\TamagotchiApp.genruntimeconfig.cache
 D:\Programming\projects\Tamagotchi\TamagotchiApp\obj\Debug\net8.0\ref\TamagotchiApp.dll
+D:\Programming\projects\Tamagotchi\TamagotchiApp\bin\Debug\net8.0\TamagotchiApp.staticwebassets.runtime.json
+D:\Programming\projects\Tamagotchi\TamagotchiApp\obj\Debug\net8.0\TamagotchiApp.Properties.Resources.resources
+D:\Programming\projects\Tamagotchi\TamagotchiApp\obj\Debug\net8.0\TamagotchiApp.csproj.GenerateResource.cache

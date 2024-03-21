@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Programming\\projects\\Tamagotchi\\TamagotchiApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Programming\\projects\\Tamagotchi\\TamagotchiApp\\wwwroot\\test.html",
+      "PackagePath": "staticwebassets\\test.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TamagotchiApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TamagotchiApp.props",
+      "PackagePath": "build\\TamagotchiApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TamagotchiApp.props",
+      "PackagePath": "buildMultiTargeting\\TamagotchiApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TamagotchiApp.props",
+      "PackagePath": "buildTransitive\\TamagotchiApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -13,5 +13,10 @@ namespace TamagotchiApp.Services
 		{
 			return _lives;
 		}
+
+		public ILive? GetTamaByName(string name)
+		{
+			return _lives.FirstOrDefault(l => l.Name == name);
+		}
 	}
 }

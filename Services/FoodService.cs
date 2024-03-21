@@ -15,5 +15,9 @@ namespace TamagotchiApp.Services
 			_food.TryGetValue(id, out Food? food);
 			return food;
 		}
+		public Dictionary<int, Food> GetFoodList()
+		{
+			return _food;
+		}
 	}
 }
