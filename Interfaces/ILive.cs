@@ -5,5 +5,6 @@
 		public int Health { get; set; }
 		public int Age { get; set; }
 		public int Fullness { get; set; }
+		public string Name { get; init; }
 	}
 }

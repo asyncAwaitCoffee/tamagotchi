@@ -1,32 +1,42 @@
-﻿using System.Collections.Generic;
+﻿
 using TamagotchiApp.Interfaces;
 
 namespace TamagotchiApp.Services
 {
-	public class LifeTicks
+	public class LifeTicks : IHostedService, IDisposable
 	{
-		readonly PeriodicTimer _timer = new(TimeSpan.FromSeconds(1));
-		readonly List<ILive> _lives = [];
-		public void Grow()
-		{
+		private Timer _timer;
+		private readonly Garden _garden;
 
-			foreach (var item in _lives)
-			{
-				item.Age++;
-				Console.WriteLine(item.Age);
-            }
+        public LifeTicks(Garden garden)
+        {
+            _garden = garden;
         }
-		public void Add(ILive live)
+        public void Dispose()
 		{
-			_lives.Add(live);
+			_timer.Dispose();
 		}
 
-		public async void Start()
+		public Task StartAsync(CancellationToken cancellationToken)
 		{
-			while (await _timer.WaitForNextTickAsync())
+			_timer = new Timer(Do, null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
+			return Task.CompletedTask;
+		}
+
+		public Task StopAsync(CancellationToken cancellationToken)
+		{
+			_timer.Change(Timeout.Infinite, 0);
+			return Task.CompletedTask;
+		}
+
+		public void Do(object? state)
+		{
+			foreach (var tama in _garden.GetAllTama())
 			{
-				Grow();
+				tama.Age++;
+				tama.Fullness--;
+				Console.WriteLine((tama.Name, tama.Age, tama.Fullness));
 			}
 		}
-}
+	}
 }
